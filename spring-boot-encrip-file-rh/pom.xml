@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>pe.org.jhsystem.demos.lib</groupId>
-	<artifactId>spring-boot-encrip-file</artifactId>
+	<artifactId>spring-boot-encrip-file-rh</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-boot-encrip-file</name>
-	<description>Encriptacion de archivos properties</description>
+	<name>spring-boot-encrip-file-rh</name>
+	<description>Encriptacion de archivos properties metodo red hat</description>
 	<properties>
 		<java.version>11</java.version>
 		<jasypt.version>3.0.3</jasypt.version>
@@ -22,11 +22,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
         <dependency>
             <groupId>com.github.ulisesbocchio</groupId>
             <artifactId>jasypt-spring-boot-starter</artifactId>
