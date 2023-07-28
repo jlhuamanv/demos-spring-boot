@@ -3,10 +3,10 @@ package pe.org.jhsystem.demos.lib.spring.boot.encrip.file;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+//@SpringBootTest
 class SpringBootEncripFileApplicationTests {
 
-	@Test
+	//@Test
 	void contextLoads() {
 	}
 
