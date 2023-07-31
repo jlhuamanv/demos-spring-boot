@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd"> 
+
+    <bean id="myBean" class="pe.org.jhsystem.demos.server.spring.boot.jmx.bean.MyBean">
+        <property name="IVA" value="21"/>
+        <property name="pais" value="España"/>
+    </bean>
+    
+    <bean id="jmxAttributeSource"
+            class="org.springframework.jmx.export.annotation.AnnotationJmxAttributeSource"/>
+    
+    <bean id="namingStrategy"
+            class="org.springframework.jmx.export.naming.MetadataNamingStrategy">
+        <property name="attributeSource" ref="jmxAttributeSource"/>
+    </bean>
+    
+    <bean id="assembler" class="org.springframework.jmx.export.assembler.MetadataMBeanInfoAssembler">
+	   <property name="attributeSource">
+	       <bean class="org.springframework.jmx.export.annotation.AnnotationJmxAttributeSource"/>
+	   </property>
+	 </bean>
+
+</beans>

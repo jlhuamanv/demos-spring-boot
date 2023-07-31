@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>MBeans demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<form action="/result" th:action="@{/result}" method="post">
+	    <table>
+	    	<p>El precio se calculará con el IVA de <p th:text="${pais}" /> </p>
+			<tr>
+				<label for="cantidad">Precio a calcular: </label>
+				<input type="text" id="cantidad" name="cantidad" />
+			</tr>
+			<tr>
+	           <td><input type="submit" value="Calcular"/></td>
+	       </tr>
+	   </table>
+	</form>
+</body>
+</html>
